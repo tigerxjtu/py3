@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> Autocomplete </title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<script>
+$(function() {
+    $('#keyword').keyup(function(){
+        $.ajax({
+            type: "GET",
+            url:"http://127.0.0.1:8080/search/"+$('#keyword').val().trim(),
+            dataType:"json",
+            data:"",
+            success: function(data){
+                empty();
+                fill(data);
+                //$(".dropdown").dropdown('toggle');
+                $("#dropdown").show();
+                $('#dropdown li').click(function(){
+                    $('#keyword').val($(this).text());
+                    $("#dropdown").hide();
+                });
+            }
+        });
+    });
+/*
+    $('#dropdown li').click(function(){
+        $('#keyword').val($(this).text());
+        $("#dropdown").hide();
+    });
+*/
+});
+
+function update(obj){
+    console.log(this)
+    console.log(obj)
+    $('#keyword').val($(obj).text());
+    //$("#dropdown").hide();
+    $(".dropdown").dropdown('hide');
+    return false;
+}
+
+function empty(){
+     $("#dropdown").empty();
+}
+
+function fill(array){
+    $.each(array,function(index,value,arr){
+            $("#dropdown").append(createItem(value));
+    });
+}
+
+function createItem(item){
+    return '<li><a href="#">'+item+'</a></li>'
+}
+
+</script>
+<body>
+<h1>Work5</h1>
+
+      <div class="dropdown" style="padding:10px;">
+          <label for="keyword">Keyword:</label>
+          <input type="text" class="form-control" id="keyword" name="keyword"/>
+
+          <ul id='dropdown' class="dropdown-menu" aria-labelledby="keyword">
+<!--            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+-->
+          </ul>
+      </div>
+
+</body>
+</html>

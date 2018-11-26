@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> 豆瓣小组 </title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .likes{
+        float: left;
+        margin-right: 19px;
+        padding: 8px 0;
+        width: 48px;
+        line-height: 1.3;
+        text-align: center;
+        font-size: 13px;
+        color: #ca6445;
+        background: #fae9da;
+    }
+    .source {
+    margin-top: 10px;
+    color: #666;
+    font-size: 12px;
+}
+  .pic {
+    float: left;
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;.
+}
+
+.group-rec {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #666;
+    padding-left:0;
+    margin-left: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+</style>
+</head> 
+<body>
+<div>
+
+<div id="navbarHeader" class="navbar navbar-inverse" style="font-size:12px;">
+            <ul class="nav navbar-nav">
+                <li><a href="#"> 豆瓣 </a></li>
+                <li><a href="#"> 读书 </a></li>
+                <li><a href="#"> 电影 </a></li>
+                <li><a href="#"> 音乐 </a></li>
+                <li><a href="#"> 同城 </a></li>
+                <li><a href="#"> 小组 </a></li>
+                <li><a href="#"> 阅读 </a></li>
+                <li><a href="#"> FM </a></li>
+                <li><a href="#"> 东西 </a></li>
+                <li><a href="#"> 市集 </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"> 下载豆瓣客户端 </a></li>
+                <li><a href="#"> 登录 </a></li>
+                <li><a href="#"> 注册 </a></li>
+            </ul>                
+</div>
+
+<div class="container">
+
+<div class="row">
+    <nav role="navigation" class="navbar navbar-default">
+       <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">豆瓣小组</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"> 精选 </a></li>
+                <li><a href="#"> 文化 </a></li>
+ 		        <li><a href="#"> 行摄 </a></li>
+                <li><a href="#"> 娱乐 </a></li>
+                <li><a href="#"> 时尚 </a></li>
+                <li><a href="#"> 生活 </a></li>
+                <li><a href="#"> 科技 </a></li>
+            </ul>
+            <form role="search" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="小组 话题" class="form-control">
+                    <button type="button" class="btn btn-default" aria-label="Search"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </form>                  
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+<h1 style="padding-bottom: 20px;">话题精选</h1>
+    <div class="col-md-9">
+    <div class="media">
+      <div class="media-left media-middle">
+        <div class="likes">19<br>喜欢</div>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="#">肉，通往主子肠胃的一封情书</a></h4>
+        <div>
+        对肉没有免疫力的，除了木下，还有猫~ 猫吃肉早已不是什么新鲜事，若食物中蛋白质脂肪供应不足，主子不仅会因能量不足而萎靡不振，更会成为“问题儿童”，造成发育不全、肌肉力量弱、免疫力...
+        </div>
+        <div class="source">       
+        <span class="from">来自<a href="https://www.douban.com/group/cat/">爱猫俱乐部小组</a></span>
+        <span class="pubtime">昨天16:13</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="media">
+      <div class="media-left media-middle">
+        <div class="likes">19<br>喜欢</div>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="#">肉，通往主子肠胃的一封情书</a></h4>
+        <div>
+        对肉没有免疫力的，除了木下，还有猫~ 猫吃肉早已不是什么新鲜事，若食物中蛋白质脂肪供应不足，主子不仅会因能量不足而萎靡不振，更会成为“问题儿童”，造成发育不全、肌肉力量弱、免疫力...
+        </div>
+        <div class="source">       
+        <span class="from">来自<a href="https://www.douban.com/group/cat/">爱猫俱乐部小组</a></span>
+        <span class="pubtime">昨天16:13</span>
+        </div>
+      </div>
+    </div>
+
+<div class="media">
+      <div class="media-left media-middle">
+        <div class="likes">19<br>喜欢</div>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="#">肉，通往主子肠胃的一封情书</a></h4>
+        <div>
+        对肉没有免疫力的，除了木下，还有猫~ 猫吃肉早已不是什么新鲜事，若食物中蛋白质脂肪供应不足，主子不仅会因能量不足而萎靡不振，更会成为“问题儿童”，造成发育不全、肌肉力量弱、免疫力...
+        </div>
+        <div class="source">       
+        <span class="from">来自<a href="https://www.douban.com/group/cat/">爱猫俱乐部小组</a></span>
+        <span class="pubtime">昨天16:13</span>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div class="col-md-3">
+<h4 class="media-heading" style="padding-bottom: 10px;">值得加入的小组</h4>
+<ul style="list-style-type: none; margin-left:0; padding:0;">
+    <li class="group-rec">
+    <div class="pic">
+      <a href="https://www.douban.com/group/xianjianzhi/"><img src="https://img1.doubanio.com/icon/g148990-8.jpg" class=""></a>
+    </div>
+    <div class="info">
+      <div class="title">
+        <a href="https://www.douban.com/group/xianjianzhi/" class="">西安兼职</a>
+      </div>
+      <span class="num">
+      24005个在西安打工会上瘾的淫
+      </span>
+      <span class="join">
+          <a href="https://www.douban.com/group/xianjianzhi/?action=join&amp;ck=" class="j a_show_login lnk-join"><i>+</i>加入小组</a>
+      </span>
+    </div>
+  </li>
+
+  <li class="group-rec">
+    <div class="pic">
+      <a href="https://www.douban.com/group/xianjianzhi/"><img src="https://img1.doubanio.com/icon/g148990-8.jpg" class=""></a>
+    </div>
+    <div class="info">
+      <div class="title">
+        <a href="https://www.douban.com/group/xianjianzhi/" class="">西安兼职</a>
+      </div>
+      <span class="num">
+      24005个在西安打工会上瘾的淫
+      </span>
+      <span class="join">
+          <a href="https://www.douban.com/group/xianjianzhi/?action=join&amp;ck=" class="j a_show_login lnk-join"><i>+</i>加入小组</a>
+      </span>
+    </div>
+  </li>
+
+
+  <li class="group-rec">
+    <div class="pic">
+      <a href="https://www.douban.com/group/xianjianzhi/"><img src="https://img1.doubanio.com/icon/g148990-8.jpg" class=""></a>
+    </div>
+    <div class="info">
+      <div class="title">
+        <a href="https://www.douban.com/group/xianjianzhi/" class="">西安兼职</a>
+      </div>
+      <span class="num">
+      24005个在西安打工会上瘾的淫
+      </span>
+      <span class="join">
+          <a href="https://www.douban.com/group/xianjianzhi/?action=join&amp;ck=" class="j a_show_login lnk-join"><i>+</i>加入小组</a>
+      </span>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

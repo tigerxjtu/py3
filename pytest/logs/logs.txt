@@ -1,0 +1,33 @@
+2018-11-05 18:55:03,648 testrequest.py[line: 82] INFO: lesson4-3
+2018-11-05 18:55:03,648 testrequest.py[line: 83] INFO: 通过
+2018-11-05 18:55:03,650 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'success'}
+2018-11-05 18:55:03,650 testrequest.py[line: 161] INFO: lesson4-1
+2018-11-05 18:55:03,652 testrequest.py[line: 162] INFO: 通过
+2018-11-05 18:55:03,652 testrequest.py[line: 163] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'4': '泰国', '5': '日本', '6': '新加坡'}}
+2018-11-05 18:55:03,680 testrequest.py[line: 82] INFO: lesson4-2
+2018-11-05 18:55:03,680 testrequest.py[line: 83] INFO: 通过
+2018-11-05 18:55:03,680 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'question': '你喜欢去哪里旅游？', 'choices': [{'4': '泰国', 'votes': 8}, {'5': '日本', 'votes': 0}, {'6': '新加坡', 'votes': 6}]}}
+2018-11-12 19:11:01,639 testrequest.py[line: 174] ERROR: lesson4-1
+2018-11-12 19:11:01,640 testrequest.py[line: 175] ERROR: 失败
+2018-11-12 19:11:01,640 testrequest.py[line: 176] ERROR: 返回结果：{'status': '10021', 'message': 'null', 'data': {}}
+2018-11-12 19:11:01,665 testrequest.py[line: 82] INFO: lesson4-3
+2018-11-12 19:11:01,665 testrequest.py[line: 83] INFO: 通过
+2018-11-12 19:11:01,666 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'success'}
+2018-11-12 19:15:28,609 testrequest.py[line: 161] INFO: lesson4-1
+2018-11-12 19:15:28,609 testrequest.py[line: 162] INFO: 通过
+2018-11-12 19:15:28,609 testrequest.py[line: 163] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'3': '新加坡', '4': '泰国'}}
+2018-11-12 19:15:28,635 testrequest.py[line: 82] INFO: lesson4-2
+2018-11-12 19:15:28,635 testrequest.py[line: 82] INFO: lesson4-3
+2018-11-12 19:15:28,636 testrequest.py[line: 83] INFO: 通过
+2018-11-12 19:15:28,636 testrequest.py[line: 83] INFO: 通过
+2018-11-12 19:15:28,636 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'question': '你喜欢去哪里旅游?', 'choices': [{'3': '新加坡', 'votes': 0}, {'4': '泰国', 'votes': 1}]}}
+2018-11-12 19:15:28,636 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'success'}
+2018-11-19 20:22:58,983 testrequest.py[line: 82] INFO: lesson4-3
+2018-11-19 20:22:58,984 testrequest.py[line: 161] INFO: lesson4-1
+2018-11-19 20:22:58,984 testrequest.py[line: 83] INFO: 通过
+2018-11-19 20:22:58,984 testrequest.py[line: 162] INFO: 通过
+2018-11-19 20:22:58,984 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'success'}
+2018-11-19 20:22:58,985 testrequest.py[line: 163] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'3': '新加坡', '4': '泰国'}}
+2018-11-19 20:22:58,991 testrequest.py[line: 82] INFO: lesson4-2
+2018-11-19 20:22:58,991 testrequest.py[line: 83] INFO: 通过
+2018-11-19 20:22:58,992 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'question': '你喜欢去哪里旅游?', 'choices': [{'3': '新加坡', 'votes': 0}, {'4': '泰国', 'votes': 1}]}}
