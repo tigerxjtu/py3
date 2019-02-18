@@ -31,3 +31,12 @@
 2018-11-19 20:22:58,991 testrequest.py[line: 82] INFO: lesson4-2
 2018-11-19 20:22:58,991 testrequest.py[line: 83] INFO: 通过
 2018-11-19 20:22:58,992 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'question': '你喜欢去哪里旅游?', 'choices': [{'3': '新加坡', 'votes': 0}, {'4': '泰国', 'votes': 1}]}}
+2018-11-26 15:33:50,469 testrequest.py[line: 161] INFO: lesson4-1
+2018-11-26 15:33:50,469 testrequest.py[line: 162] INFO: 通过
+2018-11-26 15:33:50,469 testrequest.py[line: 163] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'3': '新加坡', '4': '泰国'}}
+2018-11-26 15:33:50,469 testrequest.py[line: 82] INFO: lesson4-3
+2018-11-26 15:33:50,470 testrequest.py[line: 83] INFO: 通过
+2018-11-26 15:33:50,470 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'success'}
+2018-11-26 15:33:50,484 testrequest.py[line: 82] INFO: lesson4-2
+2018-11-26 15:33:50,484 testrequest.py[line: 83] INFO: 通过
+2018-11-26 15:33:50,484 testrequest.py[line: 84] INFO: 返回结果：{'status': '200', 'message': 'sucess', 'data': {'question': '你喜欢去哪里旅游?', 'choices': [{'3': '新加坡', 'votes': 0}, {'4': '泰国', 'votes': 1}]}}
