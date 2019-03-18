@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<title> 用户注册 </title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+ </head>
+<script>
+
+$(function(){
+
+    $('#btnAlert').click(function() {
+        alert('alert window');
+    });
+    $('#btnConfirm').click(function() {
+        confirm('confirm window');
+    });
+    $('#btnPrompt').click(function() {
+        prompt('Prompt window');
+    });
+
+    $(".modal").each(function(){
+        /*
+        $(this).draggable({
+            handle: ".modal-header"   // 只能点击头部拖动
+        });
+        */
+        $(this).draggable();
+        $(this).css("overflow", "hidden"); // 防止出现滚动条，出现的话，你会把滚动条一起拖着走的
+    });
+
+    setTimeout(show,2000)
+
+});
+
+
+function show(){
+    $('#myTable').show()
+    createPara()
+}
+
+function createPara(){
+    $('body').append('<p id="hello">Hello world</p>')
+}
+
+</script>
+
+<body>
+
+<a href="https://www.baidu.com" target="_blank">Baidu</a>
+<table class="table" id="myTable" style="display:none">
+      <caption>Optional table caption.</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Code</h4>
+      </div>
+      <div class="modal-body">
+        <p id="code">1234</p>
+      </div>
+      <div class="modal-footer">
+        <button id="okbtn" type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<button type="button" id="btnAlert" class="btn btn-default">alert</button>
+<button type="button" id="btnConfirm" class="btn btn-default">Confirm</button>
+<button type="button" id="btnPrompt" class="btn btn-default">Prompt</button>
+
+
+<iframe src="../lesson3/register.html" name="iframe" width="600" height="800"></iframe>
+
+</body>
+</html>
