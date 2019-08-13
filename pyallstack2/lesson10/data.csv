@@ -1,0 +1,4 @@
+username,password,result
+user1,wrongpassword,0
+user1,pass@1234,1
+user2,pass@1234,1
