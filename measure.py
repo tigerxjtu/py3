@@ -4,6 +4,7 @@ import os
 import json
 import numpy as np
 from cut import shoulder_points
+import math
 
 path1=r'C:\dataguru_new\txtdata'
 path2=r'C:\dataguru_new\pics'
@@ -47,12 +48,20 @@ def get_file_name(name,tag):
     print(file_name,pic_name,pics[pic_name])
     return os.path.join(path1,file_name),pics[pic_name]
 
+#shoulder: 0.17~0.22
+def shoulder_bound(max_y,min_y):
+    lower, upper = 0.17, 0.22
+    return part_bound(max_y, min_y, lower, upper)
+
 def neck_bound(max_y,min_y):
     lower, upper = 0.1, 0.17
-    h=max_y-min_y
-    lower_y=min_y+lower*h
-    upper_y=min_y+upper*h
-    return int(lower_y),int(upper_y)
+    return part_bound(max_y,min_y,lower,upper)
+
+def part_bound(max_y,min_y,lower,upper):
+    h = max_y - min_y
+    lower_y = min_y + lower * h
+    upper_y = min_y + upper * h
+    return int(lower_y), int(upper_y)
 
 def percent_y(max_y,min_y,percent):
     h = max_y - min_y
@@ -65,6 +74,71 @@ def calculate_height(points):
     max_y = np.max(Y)
     min_y = np.min(Y)
     return int(max_y-min_y)
+
+def is_neighbor(p1,p2):
+    x1, y1 = p1
+    x2, y2 = p2
+    dis=abs(x1-x2)+abs(y1-y2)
+    return dis<=20
+
+def distance(p1,p2):
+    x1,y1=p1
+    x2,y2=p2
+    return np.sqrt((x2-x1)**2+(y2-y1)**2)
+
+def angle(center,left,right):
+    a=distance(left,center)
+    b=distance(center,right)
+    c=distance(left,right)
+    ang=c/(a+b)
+    return ang
+
+def angle_point(points,delta=5):
+    size=len(points)
+    angles=[1 for _ in range(size)]
+    for i in range(delta+20,size-delta):
+        angles[i]=angle(points[i],points[i-delta],points[i+delta])
+    index=np.argmin(angles)
+    return index,points[index]
+
+def shoulder_markers(points):
+    X = np.array([p[0] for p in points])
+    Y = np.array([p[1] for p in points])
+    max_y = np.max(Y)
+    min_y = np.min(Y)
+    lower_y, upper_y = shoulder_bound(max_y, min_y)
+
+    shoulder = np.where(Y >= lower_y)
+    Y = Y[shoulder]
+    X = X[shoulder]
+
+    shoulder = np.where(Y <= upper_y)
+    Y = Y[shoulder]
+    X = X[shoulder]
+
+    points=zip(X,Y)
+    part1=[]
+    part2=[]
+    for p in points:
+        if part1:
+            last=part1[-1]
+            if is_neighbor(last,p):
+                part1.append(p)
+            else:
+                if part2:
+                    if not is_neighbor(part2[-1],p):
+                        print(p,'is invalid', last)
+                        continue
+                part2.append(p)
+        else:
+            part1.append(p)
+    print(part1)
+    print(part2)
+    _,point1=angle_point(part1)
+    _,point2=angle_point(part2)
+    print(point1,point2)
+    return point1,point2
+
 
 def calculate_feature(points):
     X=np.array([p[0] for p in points])
@@ -139,6 +213,12 @@ def display_front(name,tag='F'):
     percents=[0.17,0.22,0.23,0.29,0.36,0.42]
     for percent in percents:
         plt.scatter(range(750),[percent_y(max_y,min_y,percent)]*750,marker='.', color='g', s=1)
+    p1,p2=shoulder_markers(f_points)
+
+    x=[p1[0],p2[0]]
+    y=[p1[1],p2[1]]
+    plt.scatter(x, y, marker='*', color='b', s=10)
+
     plt.show()
 
 #一起展示正面、侧面、背面图片和轮廓点
@@ -279,4 +359,7 @@ if __name__ == '__main__':
     # join_userdata()
     # join_user_shoulder_data()
 
+    # U1000208181024132310246
+
     display_front('U1000240181024143003419', "F")
+    # display_front('U1000208181024132310246', "B")

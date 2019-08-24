@@ -8,3 +8,5 @@ def fib(n):
 
 fs=[b for a,b in fib(10)]
 print(fs)
+
+{i:i+1 for i in range(10)}
