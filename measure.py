@@ -6,8 +6,11 @@ import numpy as np
 from cut import shoulder_points
 import math
 
-path1=r'C:\dataguru_new\txtdata'
-path2=r'C:\dataguru_new\pics'
+# path1=r'C:\dataguru_new\txtdata'
+# path2=r'C:\projects\python\measure\ui\data\pics'
+
+path1=r'C:\projects\python\measure\ui\data\txtdata'
+path2=r'C:\projects\python\measure\ui\data\pics'
 
 
 
@@ -344,6 +347,17 @@ def join_user_shoulder_data():
     records = json.load(open(os.path.join(path3, 'shoulder_records.json')))
     print(records[0])
 
+def display_body(name,tag='F'):
+    feature, img = get_file_name(name, tag)
+    points = get_points(feature)
+    img=cv2.imread(img)
+    height,width = img.shape[:2]
+    for point in points:
+        cv2.circle(img,point,1,(0,0,255))
+    img=cv2.resize(img,(width//2,height//2))
+    cv2.imshow("img",img)
+    cv2.waitKey()
+
 if __name__ == '__main__':
     # f_img=cv2.imread(r'C:/dataguru_new/pics/201810/U1000154181021201534789F.jpg')
     # print(f_img.shape)
@@ -361,5 +375,7 @@ if __name__ == '__main__':
 
     # U1000208181024132310246
 
-    display_front('U1000240181024143003419', "F")
+    # display_front('U1002217190901092403591', "F")
     # display_front('U1000208181024132310246', "B")
+
+    display_body('U1002217190901092403591','F')

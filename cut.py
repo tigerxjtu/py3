@@ -34,6 +34,7 @@ def bodyseg(filename):
     image = get_file_content(filename)
 
     res = client.bodySeg(image)
+    print(res)
     labelmap = base64.b64decode(res['labelmap'])
     # time.sleep(2)
     nparr_labelmap = np.fromstring(labelmap, np.uint8)
@@ -60,6 +61,7 @@ def bodypart(filename):
 
     # """ 调用人体关键点识别 """
     para = client.bodyAnalysis(image)
+    # print(para)
     # time.sleep(2)
     return para
 
@@ -179,20 +181,21 @@ if __name__ == '__main__':
     # f=open('points.json','w')
     # f.write(str)
     # f.close()
-    f_img=cv2.imread(file_path)
 
-    plt.figure()
-    plt.imshow(f_img[:, :, ::-1])
-    plt.scatter([p[0] for p in points.values()], [p[1] for p in points.values()], marker='+', color='r', s=1)
-    for k,p in points.items():
-        plt.annotate(k,p)
-    plt.show()
+    # f_img=cv2.imread(file_path)
+    #
+    # plt.figure()
+    # plt.imshow(f_img[:, :, ::-1])
+    # plt.scatter([p[0] for p in points.values()], [p[1] for p in points.values()], marker='+', color='r', s=1)
+    # for k,p in points.items():
+    #     plt.annotate(k,p)
+    # plt.show()
 
     # files=get_pics(name)
     # for file in files:
     #     display_body(file)
     #     break
-    # display_body('201005100004_Front.jpg')
+    display_body('201005100004_Front.jpg')
 
     # img=bodyseg(file_path)
     # cv2.imshow("seg",img)
