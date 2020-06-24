@@ -5,7 +5,6 @@ from pyallstack2.lesson10.test_login import read_records , login
 # import pytest.lesson2.HTMLTestRunner as HTMLTestRunner
 import pyallstack2.lesson12.HTMLTestRunner as HTMLTestRunner
 import pyallstack2.lesson11.test_myadd as test_myadd
-
 records=read_records()
 print(records)
 

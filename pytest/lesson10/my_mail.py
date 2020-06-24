@@ -99,4 +99,10 @@ if __name__=="__main__":
     mail_content='测试邮件'
     mail_title='测试'
     mymail.send_mail(mail_title,mail_content,[])
+    # mail_content = '本次课程收获不少，感谢老师的辛苦付出,期待后续精彩课程！'
+    # mail_title = 'python自动化测试最后一周作业--李寅'
+    # mymail.send_mail(mail_title, mail_content, [r'C:\projects\python\py3\pyallstack2\lesson12\result.html',
+    #                                             r'C:\projects\python\py3\pyallstack2\lesson12\work12.py',
+    #                                             r'C:\projects\python\py3\pyallstack2\lesson10\test_login.py',
+    #                                             r'C:\projects\python\py3\pyallstack2\lesson12\my_mail.py'])
     mymail.quit()

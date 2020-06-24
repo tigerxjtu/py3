@@ -2,7 +2,9 @@ from PIL import Image
 import numpy as np
 from scipy.ndimage import filters
 import matplotlib.pyplot as plt
-im = np.array(Image.open('outline.png').convert('L'))
+import cv2
+# im = np.array(Image.open('outline.png').convert('L'))
+im=cv2.imread('outline.png',0)
 #Sobel derivative filters
 imx = np.zeros(im.shape)
 filters.sobel(im,1,imx)
